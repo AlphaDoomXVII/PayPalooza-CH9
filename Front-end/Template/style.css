@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(238, 248, 255);
+}
+
+/* hoofd balk */
+
+#balk {
+    background-color: aqua;
+    position: absolute;
+    top: 50px;
+    width: 101%;
+    height: 200px;
+    right: 1px;
+}
+
+#logo {
+    position: absolute;
+    width: 650px;
+    height: auto;
+    margin: 61.719px;
+    margin-left: 2%;
+}

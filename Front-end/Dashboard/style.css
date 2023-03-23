@@ -1,0 +1,69 @@
+body {
+    background-color: rgb(238, 248, 255);
+}
+
+/* hoofd balk */
+
+#balk {
+    background-image: linear-gradient(to right, #8fc4fe, #6eadf0, #337cca);
+    position: absolute;
+    top: 50px;
+    width: 101%;
+    height: 200px;
+    right: 1px;
+}
+
+.balkBtn {
+    background-color: white;
+    position: absolute;
+    width: 180px;
+    height: 90px;
+    right: 100px;
+    margin-top: 55px;
+    border-radius: 20px;
+    font-size: 23px;
+    --fa-animation-duration: 0s;
+} .balkBtn:hover {
+    --fa-animation-duration: 0.90s;
+    transition: 0.7s;
+    scale: 1.2;
+}
+
+#Btn1 {
+    position: absolute;
+    right: 650px;
+}
+
+#Btn2 {
+    position: absolute;
+    right: 440px;
+}
+
+#Btn3 {
+    position: absolute;
+    right: 230px;
+}
+
+#Btn4 {
+    position: absolute;
+    right: 20px;
+}
+
+#logo {
+    position: absolute;
+    width: 650px;
+    height: auto;
+    margin: 61.719px;
+    margin-left: 2%;
+}
+
+/* welkom */
+
+#welkom {
+    position: relative;
+    top: 225px;
+    text-align: center;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+

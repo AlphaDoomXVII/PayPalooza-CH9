@@ -1,3 +1,6 @@
+<?php
+include('../Placeholder/logincheck.php')
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +21,7 @@
         <button class="balkBtn" id="Btn3" > <i class="fa-solid fa-money-bill fa-bounce"></i> Budget </button>
         <button class="balkBtn" id="Btn4" > <i class="fa-solid fa-clipboard fa-bounce"></i> Categorie </button>
     </div>
-
-    <h1 id="welkom">Welkom <?=$_SESSION['Firstname']?> <?=$_SESSION['Lastname']?> </h1>
+    <h1 id="welkom">Welkom <?=$_SESSION['FirstName']?> <?=$_SESSION['LastName']?> </h1>
 
 
 

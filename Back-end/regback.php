@@ -25,17 +25,16 @@
             $FirstName = $_POST['FirstName'] ; 
             $LastName = $_POST['LastName'] ; 
             $username = $_POST['username'] ; 
-            $Balance = $_POST['Balance'] ; 
             $Email = $_POST['Email'] ; 
             $password=password_hash($_POST['password'], PASSWORD_DEFAULT); 
 
-            $query = "INSERT INTO login(uuid, FirstName, LastName, username, Balance, Email, Password) VALUES (?,?, ?, ?, ?, ?, ?)";
+            $query = "INSERT INTO users(uuid, First_Name, Last_Name, username, Email, Password) VALUES (?,?, ?, ?, ?, ?)";
             $stmt = mysqli_prepare($conn, $query);
-            mysqli_stmt_bind_param($stmt, 'sssssss', $uuid, $FirstName, $LastName, $username, $Balance, $Email, $password);
+            mysqli_stmt_bind_param($stmt, 'ssssss', $uuid, $FirstName, $LastName, $username, $Email, $password);
             $run = mysqli_stmt_execute($stmt);
 
             if($run){
-                header("location: index.php");
+                header("location: ../Front-end/placeholder/index.php");
             }
             else{
                 echo "form not submitted"; 

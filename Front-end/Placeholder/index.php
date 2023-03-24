@@ -14,7 +14,7 @@
 		<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
-				<form action="regback.php" method="post" enctype="multipart/form-data">
+				<form action="../Back-end/regback.php" method="post" enctype="multipart/form-data">
 					<label for="chk" aria-hidden="true">Sign up</label>
 					
                     <input type="text" name="FirstName" placeholder="FirstName" required="">
@@ -22,8 +22,6 @@
                     <input type="text" name="LastName" placeholder="LastName" required="">
 
 					<input type="text" name="username" placeholder="username" required="">
-
-					<input type="text" name="Balance" placeholder="Balance" required="">
 
 					<input type="email" name="Email" placeholder="Email" required="">
 
@@ -34,7 +32,7 @@
 			</div>
 
 			<div class="login">
-				<form name="form" action="loginback.php" onsubmit="return isvalid()" method="POST">
+				<form name="form" action="../../Back-end/loginback.php" onsubmit="return isvalid()" method="POST">
 					<label for="chk" aria-hidden="true">Login</label>
 					<input type="txt" name="username" placeholder="username" required="">
 					<input type="password" name="password" placeholder="Password" required="">

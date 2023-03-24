@@ -19,7 +19,7 @@
         <button class="balkBtn" id="Btn4" > <i class="fa-solid fa-clipboard fa-bounce"></i> Categorie </button>
     </div>
 
-    
+    <h1 id="welkom">Welkom <?=$_SESSION['Firstname']?> <?=$_SESSION['Lastname']?> </h1>
 
 
 

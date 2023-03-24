@@ -57,5 +57,13 @@ body {
     margin-left: 2%;
 }
 
+/* welkom */
 
+#welkom {
+    position: relative;
+    top: 225px;
+    text-align: center;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 

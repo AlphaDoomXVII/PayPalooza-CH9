@@ -14,7 +14,7 @@
 		<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
-				<form action="../Back-end/regback.php" method="post" enctype="multipart/form-data">
+				<form action="../../Back-end/regback.php" method="post" enctype="multipart/form-data">
 					<label for="chk" aria-hidden="true">Sign up</label>
 					
                     <input type="text" name="FirstName" placeholder="FirstName" required="">

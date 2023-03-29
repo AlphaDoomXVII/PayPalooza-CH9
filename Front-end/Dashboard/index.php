@@ -21,11 +21,10 @@ include('../Placeholder/logincheck.php')
         <a href="../Budget"><button class="balkBtn" id="Btn3" > <i class="fa-solid fa-money-bill fa-bounce"></i> Budget </button></a>
         <a href="../Categorie"><button class="balkBtn" id="Btn4" > <i class="fa-solid fa-clipboard fa-bounce"></i> Categorie </button></a>
     </div>
-    <h1 id="welkom">Welkom <?=$_SESSION['FirstName']?> <?=$_SESSION['LastName']?> </h1>
+    <h1 id="welkom" >Welkom <?=$_SESSION['FirstName']?> <?=$_SESSION['LastName']?> </h1>
 
-    <div>
-       
-
+    <div id="budgetDash" >
+       <h1 id="budgetDashText" >[Placeholder]</h1>
     </div>
 
 

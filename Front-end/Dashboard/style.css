@@ -92,3 +92,11 @@ body {
     font-size: 50px;
 }
 
+    height: 790px;
+}
+
+#transactiesDashText {
+    text-align: center;
+    color: black; 
+    font-size: 75px;
+}

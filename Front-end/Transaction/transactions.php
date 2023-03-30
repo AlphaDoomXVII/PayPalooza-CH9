@@ -1,3 +1,7 @@
+<?php
+require_once 'DB_connect.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +28,21 @@
 
             <input type="text" name="Info" placeholder="Info" required="" id="listInfo">
 
-            <input type="int" name="price" placeholder="prijs" required="" id="listPrice">
+            <input type="int" name="price" placeholder="Prijs" required="" id="listPrice">
+
+            <select name="list dropdown" placeholder="Category" required="" id="listDrop">
+            
+                <?php
+                    $list=$conn->query("SELECT * FROM categories ORDER BY id ASC ");
+                    while($row_list=$list->fetch_assoc()):
+                ?>
+
+                <option value="<?= $row_list['ID']; ?>">
+                    <?= $row_list['category'];?>
+                </option> 
+                
+                <?php endwhile; ?>
+            </select>
 
             <input type="int" name="description" placeholder="Bescrijving" required="" id="listDesc">
                     

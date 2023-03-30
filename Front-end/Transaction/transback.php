@@ -1,7 +1,7 @@
 <?php
     include('DB_connect.php');
 
-
+    
     session_start();
     if(isset($_POST['submit'])){
         if(!empty($_POST['Info'])&& !empty($_POST['price'])&& !empty($_POST['description'])){

@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="myscripts.js"></script>
 	<title>Start</title>
 	<link rel="stylesheet" type="text/css" href="login.css">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
@@ -27,7 +28,7 @@
 
 					<input type="password" name="password" placeholder="Password" required="">
                     
-                    <button type="submit" name="submit" value="submit" class="button">Sign up</button>
+                    <button onclick="signinPopup()" type="submit" name="submit" value="submit" class="button">Sign up</button>
 				</form>
 			</div>
 

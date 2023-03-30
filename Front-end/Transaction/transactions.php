@@ -26,7 +26,9 @@
 
         <input type="text" name="Info" placeholder="Info" required="">
 
-        <input type="int" name="price" placeholder="price" required="">
+        <input type="int" name="price" placeholder="prijs" required="">
+
+        <input type="int" name="description" placeholder="Bescrijving" required="">
                 
         <button type="submit" name="submit" value="submit" class="button">ADD</button>
     </form>

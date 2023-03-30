@@ -56,7 +56,7 @@ require_once 'DB_connect.php';
                     <tr>
                         <th>Info</th>
                         <th>Price</th>
-                        <th>Date</th>
+                        <th id="tableDate">Date</th>
                         <th>Category</th>
                         <th>Beschrijving</th>
                     </tr>

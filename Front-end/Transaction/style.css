@@ -57,5 +57,18 @@ body {
     margin-left: 2%;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
 
-
+#test {
+    position: absolute;
+    top: 600px;
+}

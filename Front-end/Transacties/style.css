@@ -61,32 +61,5 @@ body {
     margin-left: 2%;
 }
 
-/* welkom */
 
-#welkom {
-    position: relative;
-    top: 225px;
-    text-align: center;
-    font-size: 60px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Budget balk dashboard */
-
-#budgetDash {
-    background-color: white;
-    border-radius: 20px;
-    position: absolute;
-    top: 1000px;
-    right: 20px;
-    padding: 20px;
-    width: auto;
-    height: auto;
-}
-
-#budgetDashText {
-    text-align: center;
-    color: black; 
-    font-size: 50px;
-}
 

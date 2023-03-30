@@ -1,9 +1,11 @@
 body {
     background-color: rgb(238, 248, 255);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
+    display: none;
 }
 
 /* hoofd balk */

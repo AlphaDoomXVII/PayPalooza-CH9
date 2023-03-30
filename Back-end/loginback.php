@@ -28,6 +28,7 @@
                 $_SESSION['loggedin'] = true;
                 $_SESSION['FirstName']= $FirstName;
                 $_SESSION['LastName'] = $LastName;
+                $_SESSION['username'] = $username;
                 header("location:../Front-end/Dashboard/index.php");
             } 
 

@@ -1,6 +1,7 @@
 <?php
 include('../Placeholder/logincheck.php')
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,9 +24,60 @@ include('../Placeholder/logincheck.php')
     </div>
     <h1 id="welkom" >Welkom <?=$_SESSION['FirstName']?> <?=$_SESSION['LastName']?> </h1>
 
-    <div id="budgetDash" >
-       <h1 id="budgetDashText" >[Placeholder]</h1>
+    <div id="budgetDash">
+       <h1 id="budgetDashText">placeholder</h1>
     </div>
+
+    <div id="uitgaveDMDash">
+       <h1 id="uitgaveDMDashText">placeholder</h1>
+    </div>
+
+    <div id="uitgaveVMDash">
+       <h1 id="uitgaveVMDashText">placeholder</h1>
+    </div>
+
+    <div id="transactiesDash">
+    <table class="table">
+                <thead>
+                    <tr>
+                        <th>Info</th>
+                        <th>Price</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+
+            <tbody>
+                <?php
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "paypalooza";
+                    $conn = new mysqli($servername, $username, $password, $dbname);
+                    if($conn->connect_error){
+                        die("connection failed".$conn->connect_error);
+                    }
+                    echo"";
+
+                    $sql = "SELECT * FROM transactions";
+                    $result = $conn->query($sql);
+
+                    if(!$result){
+                        die("invalid query: " . $conn->error);
+                    }
+
+                    while($row = $result->fetch_assoc()){
+                        echo"<tr>
+                        <td>" . $row["Info"] . "</td>
+                        <td>" . $row["Price"] . "</td>
+                        <td>" . $row["Date"] . "</td>
+                        
+                        </tr>";
+                    }
+                ?>
+            </tbody>
+        </table>
+    </div>
+
 
 
 

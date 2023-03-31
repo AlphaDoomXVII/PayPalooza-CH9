@@ -19,6 +19,15 @@
         <a href="../Categorie"><button class="balkBtn" id="Btn4" > <i class="fa-solid fa-clipboard fa-bounce"></i> Categorie </button></a>
     </div>
 
+    <div id="listInsert">
+        <form action="../../Back-end/backEndC.php" method="post" enctype="multipart/form-data">
+
+            <input type="text" name="Category" placeholder="category" required="" id="listInfo">
+                    
+            <button type="submit" name="submit" value="submit" class="button" id="listBtn">ADD</button>
+        </form>
+    </div> 
+
     <div id="list">
         <table class="table">
                 <thead>
@@ -39,7 +48,7 @@
                     }
                     echo"";
 
-                    $sql = "SELECT * FROM transactions";
+                    $sql = "SELECT * FROM categories";
                     $result = $conn->query($sql);
 
                     if(!$result){

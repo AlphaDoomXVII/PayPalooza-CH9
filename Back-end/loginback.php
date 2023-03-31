@@ -28,7 +28,12 @@
                 $_SESSION['loggedin'] = true;
                 $_SESSION['FirstName']= $FirstName;
                 $_SESSION['LastName'] = $LastName;
-                $_SESSION['username'] = $username;
+                $sql = "select * from users WHERE username = '$username'";
+                $result = mysqli_query($conn, $sql,);
+                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                $count = mysqli_num_rows($result);
+                $uuid = $row['uuid'];
+                $_SESSION['uuid'] = $uuid;
                 header("location:../Front-end/Dashboard/index.php");
             } 
 

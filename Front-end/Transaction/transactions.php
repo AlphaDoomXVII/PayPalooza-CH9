@@ -1,5 +1,13 @@
 <?php
-require_once 'DB_connect.php';
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "paypalooza";
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if($conn->connect_error){
+        die("connection failed".$conn->connect_error);
+                        }
+    echo"";
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +32,7 @@ require_once 'DB_connect.php';
     </div>
 
     <div id="listInsert">
-        <form action="transback.php" method="post" enctype="multipart/form-data">
+        <form action="../../Back-end/transback" method="post" enctype="multipart/form-data">
 
             <input type="text" name="Info" placeholder="Info" required="" id="listInfo">
 
@@ -43,8 +51,6 @@ require_once 'DB_connect.php';
                 
                 <?php endwhile; ?>
             </select>
-
-            <input type="int" name="description" placeholder="Bescrijving" required="" id="listDesc">
                     
             <button type="submit" name="submit" value="submit" class="button" id="listBtn">ADD</button>
         </form>
@@ -58,21 +64,11 @@ require_once 'DB_connect.php';
                         <th>Price</th>
                         <th id="tableDate">Date</th>
                         <th>Category</th>
-                        <th>Beschrijving</th>
                     </tr>
                 </thead>
 
             <tbody>
                 <?php
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "";
-                    $dbname = "paypalooza";
-                    $conn = new mysqli($servername, $username, $password, $dbname);
-                    if($conn->connect_error){
-                        die("connection failed".$conn->connect_error);
-                    }
-                    echo"";
 
                     $sql = "SELECT * FROM transactions";
                     $result = $conn->query($sql);
@@ -87,7 +83,6 @@ require_once 'DB_connect.php';
                         <td>" . $row["Price"] . "</td>
                         <td>" . $row["Date"] . "</td>
                         <td>" . $row["category"] . "</td>
-                        <td>" . $row["description"] . "</td>
                         
                         </tr>";
                     }

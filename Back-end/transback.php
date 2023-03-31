@@ -26,15 +26,14 @@
             $query = "INSERT INTO transactions(uuid, Info, Price) VALUES ( ?, ?, ?)";
             
             $stmt = mysqli_prepare($conn, $query);
-            mysqli_stmt_bind_param($stmt, 'ssss', $uuid, $Info, $Price);
+            mysqli_stmt_bind_param($stmt, 'sss', $uuid, $Info, $Price);
             $run = mysqli_stmt_execute($stmt);
             
             $update = mysqli_prepare($conn, "UPDATE balance SET balance = ? WHERE uuid = ?");
             mysqli_stmt_bind_param($update, "ss", $New_balance, $uuid);
             mysqli_stmt_execute($update);
-            
             if($run){
-                header("location: transactions.php");
+                header("location: ../Front-end/Transaction/transactions.php");
             }
             else{
                 echo "form not submitted"; 

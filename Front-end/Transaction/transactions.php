@@ -32,25 +32,13 @@
     </div>
 
     <div id="listInsert">
-        <form action="../../Back-end/transback" method="post" enctype="multipart/form-data">
+        <form action="../../Back-end/transback.php" method="post" enctype="multipart/form-data">
 
             <input type="text" name="Info" placeholder="Info" required="" id="listInfo">
 
             <input type="int" name="price" placeholder="Prijs" required="" id="listPrice">
 
-            <select name="list dropdown" placeholder="Category" required="" id="listDrop">
-            
-                <?php
-                    $list=$conn->query("SELECT * FROM categories ORDER BY id ASC ");
-                    while($row_list=$list->fetch_assoc()):
-                ?>
 
-                <option value="<?= $row_list['ID']; ?>">
-                    <?= $row_list['category'];?>
-                </option> 
-                
-                <?php endwhile; ?>
-            </select>
                     
             <button type="submit" name="submit" value="submit" class="button" id="listBtn">ADD</button>
         </form>
@@ -66,7 +54,6 @@
                         <th>Category</th>
                     </tr>
                 </thead>
-
             <tbody>
                 <?php
 
@@ -83,7 +70,6 @@
                         <td>" . $row["Price"] . "</td>
                         <td>" . $row["Date"] . "</td>
                         <td>" . $row["category"] . "</td>
-                        
                         </tr>";
                     }
                 ?>

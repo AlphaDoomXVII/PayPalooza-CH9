@@ -5,13 +5,8 @@
     if(isset($_POST['submit'])){
         if(!empty($_POST['Info'])&& !empty($_POST['price'])){
         
-            $username = $_SESSION['username'];
-            $sql = "select * from users WHERE username = '$username'";
-            $result = mysqli_query($conn, $sql,);
-            $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-            $count = mysqli_num_rows($result);
-
-            $uuid = $row['uuid'];
+           
+            $uuid = $_SESSION['uuid'];
             $Info = $_POST['Info'];
             $Price = $_POST['price'];
 

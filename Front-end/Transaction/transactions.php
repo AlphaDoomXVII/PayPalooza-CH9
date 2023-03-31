@@ -43,8 +43,6 @@ require_once 'DB_connect.php';
                 
                 <?php endwhile; ?>
             </select>
-
-            <input type="int" name="description" placeholder="Bescrijving" required="" id="listDesc">
                     
             <button type="submit" name="submit" value="submit" class="button" id="listBtn">ADD</button>
         </form>
@@ -58,7 +56,6 @@ require_once 'DB_connect.php';
                         <th>Price</th>
                         <th>Date</th>
                         <th>Category</th>
-                        <th>Beschrijving</th>
                     </tr>
                 </thead>
 
@@ -87,7 +84,6 @@ require_once 'DB_connect.php';
                         <td>" . $row["Price"] . "</td>
                         <td>" . $row["Date"] . "</td>
                         <td>" . $row["category"] . "</td>
-                        <td>" . $row["description"] . "</td>
                         
                         </tr>";
                     }

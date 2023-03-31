@@ -3,7 +3,7 @@
 
     session_start();
     if(isset($_POST['submit'])){
-        if(!empty($_POST['Info'])&& !empty($_POST['price'])&& !empty($_POST['description'])){
+        if(!empty($_POST['Info'])&& !empty($_POST['price'])){
         
             $username = $_SESSION['username'];
             $sql = "select * from users WHERE username = '$username'";
@@ -14,7 +14,6 @@
             $uuid = $row['uuid'];
             $Info = $_POST['Info'];
             $Price = $_POST['price'];
-            $description = $_POST['description'];
 
             $sql2 = "select * from balance WHERE uuid = '$uuid'";
             $result = mysqli_query($conn, $sql2);
@@ -24,10 +23,10 @@
             $balance = $row['balance'];
             $New_balance = $balance - $Price;
 
-            $query = "INSERT INTO transactions(uuid, Info, Price, description) VALUES ( ?, ?, ?, ?)";
+            $query = "INSERT INTO transactions(uuid, Info, Price) VALUES ( ?, ?, ?)";
             
             $stmt = mysqli_prepare($conn, $query);
-            mysqli_stmt_bind_param($stmt, 'ssss', $uuid, $Info, $Price, $description);
+            mysqli_stmt_bind_param($stmt, 'ssss', $uuid, $Info, $Price);
             $run = mysqli_stmt_execute($stmt);
             
             $update = mysqli_prepare($conn, "UPDATE balance SET balance = ? WHERE uuid = ?");

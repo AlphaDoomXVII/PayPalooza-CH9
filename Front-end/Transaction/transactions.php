@@ -37,8 +37,20 @@
             <input type="text" name="Info" placeholder="Info" required="" id="listInfo">
 
             <input type="int" name="price" placeholder="Prijs" required="" id="listPrice">
+            
+            <select name="category" placeholder="Category" required="" id="listDrop">
+                
+                <option value="">Geen</option>
 
-
+                <?php
+                    $uuid = $_SESSION['uuid'];
+                    $list=$conn->query("SELECT * FROM `categories` ORDER BY `categories`.`category` ASC ");
+                    while($row_list=$list->fetch_assoc()):
+                ?>
+                <option value="<?= $row_list['category']; ?>"><?= $row_list['category'];?></option> 
+                
+                <?php endwhile; ?>
+            </select>
                     
             <button type="submit" name="submit" value="submit" class="button" id="listBtn">ADD</button>
         </form>

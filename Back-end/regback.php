@@ -27,27 +27,17 @@
             $username = $_POST['username'] ; 
             $Email = $_POST['Email'] ; 
             $password=password_hash($_POST['password'], PASSWORD_DEFAULT);
-            
-            $sql2 = "select * from users WHERE UserName = '$username'";
-            $result = mysqli_query($conn, $sql2);
-            $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-            $count = mysqli_num_rows($result);
+        
+            $query = "INSERT INTO users(uuid, First_Name, Last_Name, username, Email, Password) VALUES (?,?, ?, ?, ?, ?)";
+            $stmt = mysqli_prepare($conn, $query);
+            mysqli_stmt_bind_param($stmt, 'ssssss', $uuid, $FirstName, $LastName, $username, $Email, $password);
+            $run = mysqli_stmt_execute($stmt);
 
-            if($row!= ""){
-                header("location:test.php");
+            if($run){
+                header("location: ../Front-end/placeholder/index.php");
             }
             else{
-                $query = "INSERT INTO users(uuid, First_Name, Last_Name, username, Email, Password) VALUES (?,?, ?, ?, ?, ?)";
-                $stmt = mysqli_prepare($conn, $query);
-                mysqli_stmt_bind_param($stmt, 'ssssss', $uuid, $FirstName, $LastName, $username, $Email, $password);
-                $run = mysqli_stmt_execute($stmt);
-
-                if($run){
-                    header("location: ../Front-end/placeholder/index.php");
-                }
-                else{
-                    echo "form not submitted"; 
-                }
+                echo "form not submitted"; 
             }
         }
         else{

@@ -9,6 +9,7 @@
             $uuid = $_SESSION['uuid'];
             $Info = $_POST['Info'];
             $Price = $_POST['price'];
+            $category = $_POST['category'];
 
             $sql2 = "select * from balance WHERE uuid = '$uuid'";
             $result = mysqli_query($conn, $sql2);
@@ -18,10 +19,10 @@
             $balance = $row['balance'];
             $New_balance = $balance - $Price;
 
-            $query = "INSERT INTO transactions(uuid, Info, Price) VALUES ( ?, ?, ?)";
+            $query = "INSERT INTO transactions(uuid, Info, Price, category) VALUES ( ?, ?, ?,?)";
             
             $stmt = mysqli_prepare($conn, $query);
-            mysqli_stmt_bind_param($stmt, 'sss', $uuid, $Info, $Price);
+            mysqli_stmt_bind_param($stmt, 'ssss', $uuid, $Info, $Price, $category);
             $run = mysqli_stmt_execute($stmt);
             
             $update = mysqli_prepare($conn, "UPDATE balance SET balance = ? WHERE uuid = ?");

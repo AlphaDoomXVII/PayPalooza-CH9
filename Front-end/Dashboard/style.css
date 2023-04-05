@@ -136,7 +136,7 @@ body {
     left: 100px;
     padding: 20px;
     width: 600px;
-    height: 790px;
+    height: fit-content;
 }
 
 #transactiesDashText {

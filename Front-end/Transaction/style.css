@@ -92,7 +92,7 @@ th, td {
     left: 100px;
     padding: 20px;
     width: 1300px;
-    height: 790px;
+    height: fit-content;
 }
 
 #listInsert {

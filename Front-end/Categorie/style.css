@@ -73,7 +73,7 @@ body {
     left: 425px;
     padding: 20px;
     width: 650px;
-    height: 790px;
+    height: fit-content;
 }
 
 table {

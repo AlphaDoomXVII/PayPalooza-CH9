@@ -27,6 +27,16 @@
             $username = $_POST['username'] ; 
             $Email = $_POST['Email'] ; 
             $password=password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+            $stmt = $conn->prepare("SELECT UserName FROM users WHERE UserName = ?");
+            $stmt->bind_param("s", $username);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            if ($result->num_rows > 0) {
+                echo "Username already exists. Please choose a different username.";
+            } 
+            else {
         
             $query = "INSERT INTO users(uuid, First_Name, Last_Name, username, Email, Password) VALUES (?,?, ?, ?, ?, ?)";
             $stmt = mysqli_prepare($conn, $query);
@@ -38,6 +48,7 @@
             }
             else{
                 echo "form not submitted"; 
+            }
             }
         }
         else{

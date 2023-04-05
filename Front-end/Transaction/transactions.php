@@ -60,10 +60,12 @@
         <table class="table">
                 <thead>
                     <tr>
+                        <th>id</th>
                         <th>Info</th>
                         <th>Price</th>
                         <th id="tableDate">Date</th>
                         <th>Category</th>
+
                     </tr>
                 </thead>
             <tbody>
@@ -78,10 +80,14 @@
 
                     while($row = $result->fetch_assoc()){
                         echo"<tr>
-                        <td>" . $row["Info"] . "</td>
-                        <td>" . $row["Price"] . "</td>
-                        <td>" . $row["Date"] . "</td>
-                        <td>" . $row["category"] . "</td>
+                            <td>" . $row["id"] . "</td>
+                            <td>" . $row["Info"] . "</td>
+                            <td>" . $row["Price"] . "</td>
+                            <td>" . $row["Date"] . "</td>
+                            <td>" . $row["category"] . "</td>
+                            <td>
+                                <a class='btn btn-danger btn-sm' href='/ch9 palooza/PayPalooza-CH9/Front-end/Transaction/delete.php?id=".$row["id"]."'>DELETE</a>
+                            </td>
                         </tr>";
                     }
                 ?>

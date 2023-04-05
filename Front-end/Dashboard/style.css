@@ -166,10 +166,16 @@ th, td {
   font-family: Roboto;
 }
 
+footer {
+    position: absolute;
+    bottom: -1000px;
+    right: 1px;
+}
+
 section {
   width: 100%;
   display: inline-block;
-  background: #3c7abe;
+  background: #8fc4fe;
   height: 60vh;
   text-align: center;
   font-size: 22px;
@@ -178,7 +184,7 @@ section {
 }
 
 .footer-distributed {
-  background-color: #3c7abe;
+  background-color: #8fc4fe;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   width: 100%;
@@ -192,6 +198,7 @@ section {
   font-size: 14px;
   margin: 0;
 }
+
 /* Footer links */
 
 .footer-distributed p.footer-links {

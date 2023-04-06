@@ -57,12 +57,12 @@ body {
 
 #logoutBtn {
     position: absolute;
-    right: 20px;
-    top: 15px;
+    right: 15px;
+    top: 5px;
     background-color: white;
     border-radius: 200px;
     padding: 10px;
-    font-size: 23px;
+    font-size: large;
 } #logoutBtn:hover {
     transition: 0.7s;
     background-color: red;

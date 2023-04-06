@@ -66,11 +66,11 @@ body {
 /* welkom */
 
 #welkom {
-    position: relative;
-    top: 225px;
-    text-align: center;
-    font-size: 60px;
-    font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  top: 225px;
+  text-align: center;
+  font-size: 60px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Budget balk dashboard */

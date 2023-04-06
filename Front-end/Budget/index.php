@@ -19,7 +19,11 @@
         <a href="../Categorie"><button class="balkBtn" id="Btn4" > <i class="fa-solid fa-clipboard fa-bounce"></i> Categorie </button></a>
     </div>
 
-    
+    <div id="budgetMain">
+        <h1 id="budgetMainText">€ <?=$_SESSION['Budget']?></h1>
+    </div>
+
+
 
 
 

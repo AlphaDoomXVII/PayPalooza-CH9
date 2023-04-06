@@ -16,5 +16,5 @@
           $conn->query($sql);
 
           
-          header("location: /ch9 palooza/PayPalooza-CH9/Front-end/Transaction/transactions.php");
+          header("location: ./transactions.php");
           exit;

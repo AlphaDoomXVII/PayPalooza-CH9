@@ -86,7 +86,7 @@
                             <td>" . $row["Date"] . "</td>
                             <td>" . $row["category"] . "</td>
                             <td>
-                                <a class='btn btn-danger btn-sm' href='/ch9 palooza/PayPalooza-CH9/Front-end/Transaction/delete.php?id=".$row["id"]."'>DELETE</a>
+                                <a class='btn btn-danger btn-sm' href='./delete.php?id=".$row["id"]."'>DELETE</a>
                             </td>
                         </tr>";
                     }

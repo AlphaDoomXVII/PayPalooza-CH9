@@ -10,6 +10,7 @@
             $Info = $_POST['Info'];
             $Price = $_POST['price'];
             $category = $_POST['category'];
+            $BType = $_POST['BType'];
 
             $sql2 = "select * from balance WHERE uuid = '$uuid'";
             $result = mysqli_query($conn, $sql2);
@@ -24,10 +25,22 @@
             $stmt = mysqli_prepare($conn, $query);
             mysqli_stmt_bind_param($stmt, 'ssss', $uuid, $Info, $Price, $category);
             $run = mysqli_stmt_execute($stmt);
+
+            if($BType == "min"){
+                $New_balance = $balance-$Price;
+
+                $update = mysqli_prepare($conn, "UPDATE balance SET balance = ? WHERE uuid = ?");
+                mysqli_stmt_bind_param($update, "ss", $New_balance, $uuid);
+                mysqli_stmt_execute($update);
+
+            }
+            if($BType == "plus"){
+                $New_balance = $balance+$Price;
+                $update = mysqli_prepare($conn, "UPDATE balance SET balance = ? WHERE uuid = ?");
+                mysqli_stmt_bind_param($update, "ss", $New_balance, $uuid);
+                mysqli_stmt_execute($update);
+            }
             
-            $update = mysqli_prepare($conn, "UPDATE balance SET balance = ? WHERE uuid = ?");
-            mysqli_stmt_bind_param($update, "ss", $New_balance, $uuid);
-            mysqli_stmt_execute($update);
             if($run){
                 header("location: ../Front-end/Transaction/transactions.php");
             }

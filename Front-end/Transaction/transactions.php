@@ -51,6 +51,12 @@
                 
                 <?php endwhile; ?>
             </select>
+
+            <select type="text" name="BType">
+                        <option value="plus">+</option>
+
+                        <option value="min">-</option>
+            </select>
                     
             <button type="submit" name="submit" value="submit" class="button" id="listBtn">ADD</button>
         </form>
@@ -60,7 +66,6 @@
         <table class="table">
                 <thead>
                     <tr>
-                        <th>id</th>
                         <th>Info</th>
                         <th>Price</th>
                         <th id="tableDate">Date</th>
@@ -80,7 +85,6 @@
 
                     while($row = $result->fetch_assoc()){
                         echo"<tr>
-                            <td>" . $row["id"] . "</td>
                             <td>" . $row["Info"] . "</td>
                             <td>" . $row["Price"] . "</td>
                             <td>" . $row["Date"] . "</td>

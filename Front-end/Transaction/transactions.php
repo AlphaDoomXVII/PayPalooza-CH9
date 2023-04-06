@@ -86,7 +86,7 @@
                     while($row = $result->fetch_assoc()){
                         echo"<tr>
                             <td>" . $row["Info"] . "</td>
-                            <td>" . $row["Price"] . "</td>
+                            <td> € " . $row["Price"] . "</td>
                             <td>" . $row["Date"] . "</td>
                             <td>" . $row["category"] . "</td>
                             <td>
